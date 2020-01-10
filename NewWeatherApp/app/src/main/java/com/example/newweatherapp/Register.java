@@ -51,7 +51,7 @@ public class Register extends AppCompatActivity {
 
 
 
-        if (TextUtils.isEmpty(username.getText())){
+        if (TextUtils.isEmpty(username.getText())){ // Error checking.
             username.setError("Missing Username!");
         } else
         if (TextUtils.isEmpty(email.getText())){
@@ -134,23 +134,25 @@ public class Register extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu:
-                Intent mapIntent = new Intent(Register.this,WeatherApp.class);
-                startActivity(mapIntent);
+                Intent mapIntent = new Intent(Register.this,WeatherApp.class); // creates the intent for the first button on the menu
+                startActivity(mapIntent); // starts mapIntent when button is pressed which changes page.
                 //Toast.makeText(this, "This works menu",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.item1:
-                Intent loginIntent = new Intent(Register.this,Login.class);
-                startActivity(loginIntent);
+                Intent loginIntent = new Intent(Register.this,Login.class); // same as before but creating it for the login page instead of weatherapp class.
+                startActivity(loginIntent); // starts loginIntent which changes to the login page.
                 //Toast.makeText(this, "This works item1",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.item2:
+                Intent weatherIntent = new Intent(Register.this,CurrentWeather.class); // same as before but creating it for the Current WEather class.
+                startActivity(weatherIntent); // starts weatherIntent which changes to the CurrentWeather page.
 
                 //Toast.makeText(this, "This works item2",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.item3:
 
-                Intent contactIntent = new Intent(Register.this,Contact.class);
-                startActivity(contactIntent);
+                Intent contactIntent = new Intent(Register.this,Contact.class); // same as before but creating it for the contact class.
+                startActivity(contactIntent); // starts contactIntent which changes to the contact page.
                 //Toast.makeText(this, "This works item2",Toast.LENGTH_SHORT).show();
                 return true;
             default:return super.onOptionsItemSelected(item);

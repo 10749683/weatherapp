@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PinPoint Weather Version 3</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="open_weather_maps_app_id">7af53a7dd7d862e2fd639f6be9d0dc08</string>
+    <string name="change_city">Change city</string>
+    <string name="error">Error cant retrieve JSON for that Area!</string>
+
+
+
+
+</resources>
